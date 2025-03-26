@@ -7,13 +7,29 @@ function agregarAlCarrito(producto, precio) {
     actualizarCarrito();
 }
 
+function eliminarDelCarrito(index) {
+    // Eliminar el producto de la posición indicada en el carrito
+    total -= carrito[index].precio;
+    carrito.splice(index, 1);
+    actualizarCarrito();
+}
+
 function actualizarCarrito() {
     const listaCarrito = document.getElementById("listaCarrito");
     listaCarrito.innerHTML = '';
 
-    carrito.forEach(item => {
+    carrito.forEach((item, index) => {
         const li = document.createElement("li");
         li.textContent = `${item.producto} - $${item.precio}`;
+        
+        // Crear el botón de eliminar
+        const eliminarBtn = document.createElement("button");
+        eliminarBtn.textContent = "Eliminar";
+        eliminarBtn.onclick = function() {
+            eliminarDelCarrito(index);
+        };
+
+        li.appendChild(eliminarBtn);
         listaCarrito.appendChild(li);
     });
 
