@@ -29,6 +29,13 @@ header .logo img {
     height: 50px; /* Ajusta el tamaño de tu logo */
 }
 
+header .company-name {
+    margin-left: 10px; /* Espacio entre el logo y el nombre */
+    color: white;
+    font-size: 2em; /* Tamaño grande para el nombre */
+    font-weight: bold;
+}
+
 header .search-bar {
     display: flex;
     width: 60%;
