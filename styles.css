@@ -1,3 +1,10 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -63,8 +70,9 @@ h2 {
 }
 
 .product img {
-    width: 100%;
-    height: auto;
+    width: 100%;  /* Asegura que las imágenes no sobresalgan de su contenedor */
+    height: 200px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover;  /* Hace que las imágenes mantengan su aspecto pero cubran el espacio de la caja */
     border-radius: 8px;
     margin-bottom: 15px;
 }
