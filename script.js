@@ -8,7 +8,6 @@ function agregarAlCarrito(producto, precio) {
 }
 
 function eliminarDelCarrito(index) {
-    // Eliminar el producto de la posición indicada en el carrito
     total -= carrito[index].precio;
     carrito.splice(index, 1);
     actualizarCarrito();
@@ -22,7 +21,6 @@ function actualizarCarrito() {
         const li = document.createElement("li");
         li.textContent = `${item.producto} - $${item.precio}`;
         
-        // Crear el botón de eliminar
         const eliminarBtn = document.createElement("button");
         eliminarBtn.textContent = "Eliminar";
         eliminarBtn.onclick = function() {
