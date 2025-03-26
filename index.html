@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlabs - Tienda de Computadoras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Starlabs</h1>
+            <p>Tu tienda de computadoras y accesorios</p>
+        </div>
+        <nav>
+            <a href="#productos">Productos</a>
+            <a href="#mision">Misión</a>
+            <a href="#carrito">Carrito</a>
+        </nav>
+    </header>
+
+    <section id="productos">
+        <h2>Productos Destacados</h2>
+        <div class="product" id="producto1">
+            <img src="laptop1.jpg" alt="Laptop Gaming X1">
+            <h3>Asus Rog</h3>
+            <p>Precio: $32,000</p>
+            <button onclick="agregarAlCarrito('Laptop Gaming X1', 1200)">Agregar al carrito</button>
+        </div>
+        <div class="product" id="producto2">
+            <img src="laptop2.jpg" alt="Laptop Profesional Z3">
+            <h3>Macbook Pro M4</h3>
+            <p>Precio: $38,000</p>
+            <button onclick="agregarAlCarrito('Laptop Profesional Z3', 950)">Agregar al carrito</button>
+        </div>
+        <div class="product" id="producto3">
+            <img src="accesorio1.jpg" alt="Mouse Ergonómico X5">
+            <h3>Mouse Ergonómico </h3>
+            <p>Precio: $50</p>
+            <button onclick="agregarAlCarrito('Mouse Ergonómico X5', 50)">Agregar al carrito</button>
+        </div>
+        <div class="product" id="producto4">
+            <img src="accesorio2.jpg" alt="Teclado Mecánico K7">
+            <h3>Teclado Mecánico K7</h3>
+            <p>Precio: $80</p>
+            <button onclick="agregarAlCarrito('Teclado Mecánico K7', 80)">Agregar al carrito</button>
+        </div>
+    </section>
+
+    <section id="mision">
+        <h2>Misión y Visión</h2>
+        <p><strong>Misión:</strong> En Starlabs ofrecemos tecnología de vanguardia para que nuestros clientes disfruten de la mejor experiencia en computadoras y accesorios de alto rendimiento.</p>
+        <p><strong>Visión:</strong> Ser la tienda online líder en productos de computación, ofreciendo siempre lo mejor en tecnología para satisfacer las necesidades de nuestros clientes.</p>
+    </section>
+
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="listaCarrito"></ul>
+        <p id="total">Total: $0</p>
+        <button onclick="realizarCompra()">Realizar Compra</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Starlabs | Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
